@@ -15,8 +15,21 @@ public class Solution {
     }
 
     public int sumDouble(int a, int b) {
-        if(a == b){
-            return (a+b)*2;
-        }else return a+b;
+        if (a == b) {
+            return (a + b) * 2;
+        } else return a + b;
+    }
+
+    public int diff21(int n) {
+        if (n > 21)
+            return (n - 21) * 2;
+        else
+            return 21 - n;
+    }
+
+    public boolean parrotTrouble(boolean talking, int hour) {
+        if (talking && (hour < 7 || hour > 20)) {
+            return true;
+        } else return false;
     }
 }
