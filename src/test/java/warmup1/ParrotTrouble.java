@@ -1,5 +1,6 @@
+package warmup1;
+
 import org.junit.Test;
-import warmup1.Solution;
 
 import static junit.framework.TestCase.assertFalse;
 import static junit.framework.TestCase.assertTrue;

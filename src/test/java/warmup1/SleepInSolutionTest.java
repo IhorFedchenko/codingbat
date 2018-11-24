@@ -1,5 +1,6 @@
+package warmup1;
+
 import org.junit.Test;
-import warmup1.Solution;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;

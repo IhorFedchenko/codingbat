@@ -37,5 +37,7 @@ public class Solution {
         return (a==10 || b==10) ||(a+b==10);
         //return (a == 10 || b == 10 || a+b == 10);
     }
-
+    public boolean nearHundred(int n) {
+        return (n >= 90 && n <= 110) ||(n >= 190 && n <= 210);
+    }
 }
