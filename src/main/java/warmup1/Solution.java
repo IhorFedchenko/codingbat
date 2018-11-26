@@ -43,10 +43,18 @@ public class Solution {
     }
 
     public boolean posNeg(int a, int b, boolean negative) {
-        if ((a>0 && b<0 && !negative) || (a<0 && b>0 && !negative)){
+        if ((a > 0 && b < 0 && !negative) || (a < 0 && b > 0 && !negative)) {
             return true;
-        }else if(a < 0 && b < 0 && negative){
+        } else if (a < 0 && b < 0 && negative) {
             return true;
-        }else return false;
+        } else return false;
+    }
+
+    public String notString(String str) {
+        if (str.length() < 3) {
+            return "not " + str;
+        } else if (str.substring(0, 3).equals("not")) {
+            return str;
+        } else return "not " + str;
     }
 }
