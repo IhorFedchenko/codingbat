@@ -57,4 +57,9 @@ public class Solution {
             return str;
         } else return "not " + str;
     }
+
+    public String missingChar(String str, int n) {
+        return str.replaceFirst(String.valueOf(str.charAt(n)), "");
+    }
+
 }
