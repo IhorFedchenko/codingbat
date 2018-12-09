@@ -62,9 +62,30 @@ public class Solution {
         return str.replaceFirst(String.valueOf(str.charAt(n)), "");
     }
 
+    public String frontBack(String str) {
+        if (str.length() < 2) {
+            return str;
+        } else {
+            char first = str.charAt(0);
+            char last = str.charAt(str.length() - 1);
+            str = str.substring(1, str.length() - 1);
+            return last + str + first;
+        }
+    }
     public String backAround(String str) {
         String tmp = str.substring(str.length() - 1);
         return tmp + str + tmp;
     }
+}
 
+    public String front3(String str) {
+        String result = new String();
+        if (str.length() > 3) {
+            str = str.substring(0, 3);
+        }
+        for (int i = 0; i < 3; i++) {
+            result += str;
+        }
+        return result;
+    }
 }
