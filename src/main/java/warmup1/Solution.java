@@ -72,11 +72,6 @@ public class Solution {
             return last + str + first;
         }
     }
-    public String backAround(String str) {
-        String tmp = str.substring(str.length() - 1);
-        return tmp + str + tmp;
-    }
-}
 
     public String front3(String str) {
         String result = new String();
@@ -87,5 +82,10 @@ public class Solution {
             result += str;
         }
         return result;
+    }
+
+    public String backAround(String str) {
+        String tmp = str.substring(str.length() - 1);
+        return tmp + str + tmp;
     }
 }
