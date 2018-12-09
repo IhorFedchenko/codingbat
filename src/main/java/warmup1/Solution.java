@@ -62,4 +62,9 @@ public class Solution {
         return str.replaceFirst(String.valueOf(str.charAt(n)), "");
     }
 
+    public String backAround(String str) {
+        String tmp = str.substring(str.length() - 1);
+        return tmp + str + tmp;
+    }
+
 }
