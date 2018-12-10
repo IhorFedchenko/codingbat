@@ -88,4 +88,8 @@ public class Solution {
         String tmp = str.substring(str.length() - 1);
         return tmp + str + tmp;
     }
+
+    public boolean or35(int n) {
+        return n % 3 == 0 || n % 5 == 0;
+    }
 }
