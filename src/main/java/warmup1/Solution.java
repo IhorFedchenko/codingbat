@@ -92,4 +92,13 @@ public class Solution {
     public boolean or35(int n) {
         return n % 3 == 0 || n % 5 == 0;
     }
+
+    public String front22(String str) {
+        String result = new String();
+        if (str.length() <= 1){
+            return str + str +str;
+        }
+        String insert = str.substring(0,2);
+        return insert+str+insert;
+    }
 }
