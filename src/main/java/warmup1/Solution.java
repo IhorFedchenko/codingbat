@@ -95,17 +95,21 @@ public class Solution {
 
     public String front22(String str) {
         String result = new String();
-        if (str.length() <= 1){
-            return str + str +str;
+        if (str.length() <= 1) {
+            return str + str + str;
         }
-        String insert = str.substring(0,2);
-        return insert+str+insert;
+        String insert = str.substring(0, 2);
+        return insert + str + insert;
     }
 
     public boolean startHi(String str) {
-        if (str.length()< 2){
+        if (str.length() < 2) {
             return false;
         }
-        return str.substring(0,2).equals("hi") ;
+        return str.substring(0, 2).equals("hi");
+    }
+
+    public boolean icyHot(int temp1, int temp2) {
+        return (temp1 < 0 && temp2 > 100) || (temp2 < 0 && temp1 > 100);
     }
 }
