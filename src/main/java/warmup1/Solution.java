@@ -112,4 +112,8 @@ public class Solution {
     public boolean icyHot(int temp1, int temp2) {
         return (temp1 < 0 && temp2 > 100) || (temp2 < 0 && temp1 > 100);
     }
+
+    public boolean in1020 (int a, int b){
+        return  (a > 9 && a < 21) || (b > 9 && b <21);
+    }
 }
