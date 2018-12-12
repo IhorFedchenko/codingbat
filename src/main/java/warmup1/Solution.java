@@ -116,4 +116,8 @@ public class Solution {
     public boolean in1020 (int a, int b){
         return  (a > 9 && a < 21) || (b > 9 && b <21);
     }
+
+    public boolean hasTeen(int a, int b, int c){
+        return (a > 12 && a < 20) || (b > 12 && b < 20) || (c > 12 && c < 20);
+    }
 }
