@@ -125,4 +125,12 @@ public class Solution {
         return (a > 12 && a < 20) && !(b > 12 && b < 20) || !(a > 12 && a < 20) && (b > 12 && b < 20);
     }
 
+    public String delDel(String str) {
+        if(str.length() < 4){
+            return str;
+        }
+        if (str.substring(1,4).equals("del")){
+            return str.substring(0,1)+ str.substring(4);
+        } else return str;
+    }
 }
