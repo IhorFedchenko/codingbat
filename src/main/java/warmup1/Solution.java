@@ -120,4 +120,9 @@ public class Solution {
     public boolean hasTeen(int a, int b, int c){
         return (a > 12 && a < 20) || (b > 12 && b < 20) || (c > 12 && c < 20);
     }
+
+    public boolean loneTeen(int a, int b) {
+        return (a > 12 && a < 20) && !(b > 12 && b < 20) || !(a > 12 && a < 20) && (b > 12 && b < 20);
+    }
+
 }
