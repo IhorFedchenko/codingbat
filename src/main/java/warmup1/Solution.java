@@ -113,11 +113,11 @@ public class Solution {
         return (temp1 < 0 && temp2 > 100) || (temp2 < 0 && temp1 > 100);
     }
 
-    public boolean in1020 (int a, int b){
-        return  (a > 9 && a < 21) || (b > 9 && b <21);
+    public boolean in1020(int a, int b) {
+        return (a > 9 && a < 21) || (b > 9 && b < 21);
     }
 
-    public boolean hasTeen(int a, int b, int c){
+    public boolean hasTeen(int a, int b, int c) {
         return (a > 12 && a < 20) || (b > 12 && b < 20) || (c > 12 && c < 20);
     }
 
@@ -126,11 +126,18 @@ public class Solution {
     }
 
     public String delDel(String str) {
-        if(str.length() < 4){
+        if (str.length() < 4) {
             return str;
         }
-        if (str.substring(1,4).equals("del")){
-            return str.substring(0,1)+ str.substring(4);
+        if (str.substring(1, 4).equals("del")) {
+            return str.substring(0, 1) + str.substring(4);
         } else return str;
+    }
+
+    public boolean mixStart(String str) {
+        if (str.length() < 3){
+            return false;
+        }
+            return  str.substring(1, 3).equals("ix");
     }
 }
