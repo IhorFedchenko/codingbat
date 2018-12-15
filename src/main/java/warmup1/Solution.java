@@ -135,24 +135,24 @@ public class Solution {
     }
 
     public boolean mixStart(String str) {
-        if (str.length() < 3){
+        if (str.length() < 3) {
             return false;
         }
-            return  str.substring(1, 3).equals("ix");
+        return str.substring(1, 3).equals("ix");
     }
 
     public String startOz(String str) {
-        String result  = "";
-        if (str.equals("o")){
+        String result = "";
+        if (str.equals("o")) {
             return "o";
-        }else if (str.length() >= 2) {
+        } else if (str.length() >= 2) {
 //            str.charAt(0)=='o'
-            if (str.substring(0,1).equals("o")){
-                result+="o";
+            if (str.substring(0, 1).equals("o")) {
+                result += "o";
             }
 //            str.charAt(1)=='z'
-            if (str.substring(1,2).equals("z")){
-                result+="z";
+            if (str.substring(1, 2).equals("z")) {
+                result += "z";
             }
         }
         return result;
@@ -160,12 +160,21 @@ public class Solution {
 
     public int intMax(int a, int b, int c) {
         int result = a;
-        if (result < b){
+        if (result < b) {
             result = b;
         }
-        if (result < c){
+        if (result < c) {
             result = c;
         }
         return result;
+    }
+
+    public int close10(int a, int b) {
+        if (Math.abs(10 - a) < Math.abs(10 - b)) {
+            return a;
+        }
+        if (Math.abs(10 - a) > Math.abs(10 - b)) {
+            return b;
+        } else return 0;
     }
 }
