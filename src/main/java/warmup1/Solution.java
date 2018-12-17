@@ -192,4 +192,11 @@ public class Solution {
         }
         return result;
     }
+
+    public boolean stringE(String str) {
+        if(str.length() == 0 || str.length() == str.replace("e","").length()){
+            return false;
+        }
+        return str.length() <= (str.replace("e","").length()+3);
+    }
 }
