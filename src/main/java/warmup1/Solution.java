@@ -183,20 +183,24 @@ public class Solution {
     }
 
     public int max1020(int a, int b) {
-        int result  = 0;
-        if (a > 9 && a < 21){
+        int result = 0;
+        if (a > 9 && a < 21) {
             result = a;
         }
-        if ((b > 9 && b < 21) && b > result){
+        if ((b > 9 && b < 21) && b > result) {
             result = b;
         }
         return result;
     }
 
     public boolean stringE(String str) {
-        if(str.length() == 0 || str.length() == str.replace("e","").length()){
+        if (str.length() == 0 || str.length() == str.replace("e", "").length()) {
             return false;
         }
-        return str.length() <= (str.replace("e","").length()+3);
+        return str.length() <= (str.replace("e", "").length() + 3);
+    }
+
+    public boolean lastDigit(int a, int b) {
+        return a % 10 == b % 10;
     }
 }
