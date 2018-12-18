@@ -210,4 +210,15 @@ public class Solution {
         }
         return str.substring(0, str.length() - 3) + str.substring(str.length() - 3).toUpperCase();
     }
+
+    public String everyNth(String str, int n) {
+        if (n > str.length()){
+            return str.substring(0,1);
+        }
+        String result = "";
+        for (int i = 0; i < str.length() ; i+=n) {
+            result += str.charAt(i);
+        }
+        return result;
+    }
 }
