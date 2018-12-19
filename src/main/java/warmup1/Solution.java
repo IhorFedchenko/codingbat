@@ -203,4 +203,22 @@ public class Solution {
     public boolean lastDigit(int a, int b) {
         return a % 10 == b % 10;
     }
+
+    public String endUp(String str) {
+        if (str.length() < 4) {
+            return str.toUpperCase();
+        }
+        return str.substring(0, str.length() - 3) + str.substring(str.length() - 3).toUpperCase();
+    }
+
+    public String everyNth(String str, int n) {
+        if (n > str.length()){
+            return str.substring(0,1);
+        }
+        String result = "";
+        for (int i = 0; i < str.length() ; i+=n) {
+            result += str.charAt(i);
+        }
+        return result;
+    }
 }

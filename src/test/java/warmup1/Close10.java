@@ -45,7 +45,7 @@ public class Close10 {
     @Test
     public void close_v7(){
         Solution solution = new Solution();
-        assertEquals(10, solution.close10(8,12));
+        assertEquals(10, solution.close10(10,12));
     }
 
     @Test
