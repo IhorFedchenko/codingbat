@@ -27,11 +27,18 @@ public class Solution {
 
     int countXX(String str) {
         int result = 0;
-        for (int i = 0; i < str.length()-1 ; i++) {
-            if (str.substring(i, i+1).equals("xx")){
+        for (int i = 0; i < str.length() - 1; i++) {
+            if (str.substring(i, i + 1).equals("xx")) {
                 result++;
             }
         }
         return result;
+    }
+
+    boolean doubleX(String str) {
+        if (str.replaceAll("xx", "").length() == str.length() || str.indexOf("x") == str.length() - 1) {
+            return false;
+        }
+        return str.substring(str.indexOf("x"), str.indexOf("x") + 2).equals("xx");
     }
 }
