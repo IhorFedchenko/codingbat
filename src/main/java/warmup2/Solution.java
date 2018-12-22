@@ -44,16 +44,16 @@ public class Solution {
 
     public String stringBits(String str) {
         String result = "";
-        for (int i = 0; i < str.length() ; i+=2) {
-            result+=str.charAt(i);
+        for (int i = 0; i < str.length(); i += 2) {
+            result += str.charAt(i);
         }
         return result;
     }
 
     public String stringSplosion(String str) {
         String result = "";
-        for (int i = 0; i < str.length() ; i++) {
-            result+= str.substring(0, i+1);
+        for (int i = 0; i < str.length(); i++) {
+            result += str.substring(0, i + 1);
         }
         return result;
     }
@@ -65,6 +65,16 @@ public class Solution {
         int result = 0;
         for (int i = 0; i < str.length() - 2; i++) {
             if (str.substring(i, i + 2).equals(str.substring(str.length() - 2))) {
+                result++;
+            }
+        }
+        return result;
+    }
+
+    public int arrayCount9(int[] nums) {
+        int result = 0;
+        for (int i = 0; i < nums.length; i++) {
+            if (nums[i] == 9) {
                 result++;
             }
         }
