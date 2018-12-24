@@ -93,4 +93,25 @@ public class Solution {
         }
         return false;
     }
+
+    public boolean array123(int[] nums) {
+        boolean one = false;
+        boolean two = false;
+        boolean three = false;
+        for (int i = 0; i < nums.length; i++) {
+            if (one && two && three){
+                return true;
+            }
+            if (nums[i] == 1){
+                one = true;
+            }
+            if (nums[i] == 2){
+                two = true;
+            }
+            if (nums[i] == 3){
+                three = true;
+            }
+        }
+        return one && two && three;
+    }
 }
