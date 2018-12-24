@@ -80,4 +80,17 @@ public class Solution {
         }
         return result;
     }
+
+    public boolean arrayFront9(int[] nums) {
+        int check = 4;
+        if (check >= nums.length){
+            check = nums.length;
+        }
+        for (int i = 0; i < check ; i++) {
+            if (nums[i] == 9){
+                return true;
+            }
+        }
+        return false;
+    }
 }
