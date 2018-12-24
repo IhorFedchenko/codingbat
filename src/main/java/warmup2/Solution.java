@@ -82,11 +82,11 @@ public class Solution {
     }
 
     public boolean arrayFront9(int[] nums) {
-        int check = 4;
-        if (check >= nums.length){
-            check = nums.length;
+        int checkPoint = 4;
+        if (checkPoint >= nums.length){
+            checkPoint = nums.length;
         }
-        for (int i = 0; i < check ; i++) {
+        for (int i = 0; i < checkPoint ; i++) {
             if (nums[i] == 9){
                 return true;
             }
