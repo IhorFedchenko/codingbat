@@ -83,11 +83,11 @@ public class Solution {
 
     public boolean arrayFront9(int[] nums) {
         int checkPoint = 4;
-        if (checkPoint >= nums.length){
+        if (checkPoint >= nums.length) {
             checkPoint = nums.length;
         }
-        for (int i = 0; i < checkPoint ; i++) {
-            if (nums[i] == 9){
+        for (int i = 0; i < checkPoint; i++) {
+            if (nums[i] == 9) {
                 return true;
             }
         }
@@ -99,19 +99,36 @@ public class Solution {
         boolean two = false;
         boolean three = false;
         for (int i = 0; i < nums.length; i++) {
-            if (one && two && three){
+            if (one && two && three) {
                 return true;
             }
-            if (nums[i] == 1){
+            if (nums[i] == 1) {
                 one = true;
             }
-            if (nums[i] == 2){
+            if (nums[i] == 2) {
                 two = true;
             }
-            if (nums[i] == 3){
+            if (nums[i] == 3) {
                 three = true;
             }
         }
         return one && two && three;
+    }
+
+    public int stringMatch(String a, String b) {
+        int result = 0;
+//        int len = Math.min(a.length(), b.length());
+        int stringLength = a.length();
+
+        if (b.length() < a.length()) {
+            stringLength = b.length();
+        }
+
+        for (int i = 0; i < stringLength - 1; i++) {
+            if (a.substring(i, i + 2).equals(b.substring(i, i + 2))) {
+                result++;
+            }
+        }
+        return result;
     }
 }
