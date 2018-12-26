@@ -131,4 +131,18 @@ public class Solution {
         }
         return result;
     }
+
+    public String altPairs(String str) {
+        String result = "";
+        int jump = 0;
+        for (int i = 0; i < str.length() ; i++) {
+            result+= str.charAt(i);
+            jump++;
+            if (jump == 2){
+                i+=2;
+                jump = 0;
+            }
+        }
+        return result;
+    }
 }
