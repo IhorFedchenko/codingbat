@@ -135,14 +135,24 @@ public class Solution {
     public String altPairs(String str) {
         String result = "";
         int jump = 0;
-        for (int i = 0; i < str.length() ; i++) {
-            result+= str.charAt(i);
+        for (int i = 0; i < str.length(); i++) {
+            result += str.charAt(i);
             jump++;
-            if (jump == 2){
-                i+=2;
+            if (jump == 2) {
+                i += 2;
                 jump = 0;
             }
         }
         return result;
+    }
+
+    public String stringX(String str) {
+        if (str == null || str.length() < 2) {
+            return str;
+        }
+        String prefix = str.substring(0, 1);
+        String midle = str.substring(1, str.length() - 1).replaceAll("x", "");
+        String sufix = str.substring(str.length() - 1);
+        return prefix + midle + sufix;
     }
 }
