@@ -155,4 +155,8 @@ public class Solution {
         String sufix = str.substring(str.length() - 1);
         return prefix + midle + sufix;
     }
+
+    public String stringYak(String str) {
+        return str.replaceAll("yak", "");
+    }
 }
