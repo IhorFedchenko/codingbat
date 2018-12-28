@@ -162,8 +162,8 @@ public class Solution {
 
     public int array667(int[] nums) {
         int result = 0;
-        for (int i = 0; i < nums.length -1 ; i++) {
-            if (nums[i] == 6 && (nums[i+1] == 6)|| nums[i+1] ==7){
+        for (int i = 0; i < nums.length - 1; i++) {
+            if (nums[i] == 6 && (nums[i + 1] == 6) || nums[i + 1] == 7) {
                 result++;
             }
         }
@@ -171,11 +171,21 @@ public class Solution {
     }
 
     public boolean noTriples(int[] nums) {
-        for (int i = 0; i < nums.length - 2 ; i++) {
-            if (nums[i] ==  nums[i+1] && nums[i+1] == nums[i+2]){
+        for (int i = 0; i < nums.length - 2; i++) {
+            if (nums[i] == nums[i + 1] && nums[i + 1] == nums[i + 2]) {
                 return false;
             }
         }
         return true;
+    }
+
+    public boolean has271(int[] nums) {
+        for (int i = 0; i < nums.length - 2; i++) {
+            if (nums[i + 1] == (nums[i] + 5) &&
+                    Math.abs(nums[i + 2] - (nums[i] - 1)) <= 2) {
+                return true;
+            }
+        }
+        return false;
     }
 }
