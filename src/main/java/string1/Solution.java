@@ -14,4 +14,8 @@ public class Solution {
 //        makeTags("i", "Yay") → "<i>Yay</i>"
         return "<"+tag+">"+word+"</"+tag+">";
     }
+
+    public String makeOutWord(String out, String word) {
+        return out.substring(0,2) + word + out.substring(2);
+    }
 }
