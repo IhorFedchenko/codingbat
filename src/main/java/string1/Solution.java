@@ -24,4 +24,11 @@ public class Solution {
                 str.substring(str.length()-2)+
                 str.substring(str.length()-2);
     }
+
+    public String firstTwo(String str) {
+        if (str.length()< 2){
+            return str;
+        }
+        return str.substring(0,2);
+    }
 }
