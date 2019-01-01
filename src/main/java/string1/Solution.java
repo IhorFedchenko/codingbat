@@ -12,23 +12,27 @@ public class Solution {
 
     public String makeTags(String tag, String word) {
 //        makeTags("i", "Yay") → "<i>Yay</i>"
-        return "<"+tag+">"+word+"</"+tag+">";
+        return "<" + tag + ">" + word + "</" + tag + ">";
     }
 
     public String makeOutWord(String out, String word) {
-        return out.substring(0,2) + word + out.substring(2);
+        return out.substring(0, 2) + word + out.substring(2);
     }
 
     public String extraEnd(String str) {
-        return str.substring(str.length()-2)+
-                str.substring(str.length()-2)+
-                str.substring(str.length()-2);
+        return str.substring(str.length() - 2) +
+                str.substring(str.length() - 2) +
+                str.substring(str.length() - 2);
     }
 
     public String firstTwo(String str) {
-        if (str.length()< 2){
+        if (str.length() < 2) {
             return str;
         }
-        return str.substring(0,2);
+        return str.substring(0, 2);
+    }
+
+    public String firstHalf(String str) {
+        return str.substring(0, str.length() / 2);
     }
 }
