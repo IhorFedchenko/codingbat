@@ -35,4 +35,11 @@ public class Solution {
     public String firstHalf(String str) {
         return str.substring(0, str.length() / 2);
     }
+
+    public String withoutEnd(String str) {
+        if (str.length() < 3){
+            return "";
+        }
+        return str.substring(1, str.length()-1);
+    }
 }
