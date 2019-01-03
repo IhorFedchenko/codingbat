@@ -37,16 +37,29 @@ public class Solution {
     }
 
     public String withoutEnd(String str) {
-        if (str.length() < 3){
+        if (str.length() < 3) {
             return "";
         }
-        return str.substring(1, str.length()-1);
+        return str.substring(1, str.length() - 1);
     }
 
     public String comboString(String a, String b) {
-        if (a.length() < b.length()){
-            return a+b+a;
+        if (a.length() < b.length()) {
+            return a + b + a;
         }
-        return b+a+b;
+        return b + a + b;
+    }
+
+    public String nonStart(String a, String b) {
+        String resultA = "";
+        String resultB = "";
+        if (a.length() > 1) {
+            resultA = a.substring(1);
+        }
+
+        if (b.length() > 1) {
+            resultB = b.substring(1);
+        }
+        return resultA + resultB;
     }
 }
