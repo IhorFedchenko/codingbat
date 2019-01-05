@@ -64,17 +64,24 @@ public class Solution {
     }
 
     public String left2(String str) {
-        return str.substring(2)+ str.substring(0,2);
+        return str.substring(2) + str.substring(0, 2);
     }
 
     public String right2(String str) {
-        return str.substring(str.length()-2)+ str.substring(0, str.length()-2);
+        return str.substring(str.length() - 2) + str.substring(0, str.length() - 2);
     }
 
     public String theEnd(String str, boolean front) {
-        if (front){
+        if (front) {
             return String.valueOf(str.charAt(0));
         }
-        return String.valueOf(str.charAt(str.length()-1));
+        return String.valueOf(str.charAt(str.length() - 1));
+    }
+
+    public String withouEnd2(String str) {
+        if (str.length() <= 2) {
+            return "";
+        }
+        return str.substring(1,str.length()-1);
     }
 }
