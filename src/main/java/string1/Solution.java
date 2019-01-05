@@ -84,4 +84,11 @@ public class Solution {
         }
         return str.substring(1,str.length()-1);
     }
+
+    public String middleTwo(String str) {
+       if (str.length() < 3){
+           return str;
+       }
+       return str.substring(str.length()/2-1, str.length()/2+1);
+    }
 }
