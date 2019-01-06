@@ -93,9 +93,13 @@ public class Solution {
     }
 
     public boolean endsLy(String str) {
-        if(str.length() <2){
+        if (str.length() < 2) {
             return false;
         }
         return str.substring(str.length() - 2).equals("ly");
+    }
+
+    public String middleThree(String str) {
+        return str.substring(str.length() / 2 - 1, str.length() / 2 + 2);
     }
 }
