@@ -102,4 +102,8 @@ public class Solution {
     public String middleThree(String str) {
         return str.substring(str.length() / 2 - 1, str.length() / 2 + 2);
     }
+
+    public String nTwice(String str, int n) {
+        return str.substring(0,n) + str.substring(str.length()- n);
+    }
 }
