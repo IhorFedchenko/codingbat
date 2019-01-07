@@ -106,4 +106,11 @@ public class Solution {
     public String nTwice(String str, int n) {
         return str.substring(0,n) + str.substring(str.length()- n);
     }
+
+    public String twoChar(String str, int index) {
+        if (str.length() <= index + 1 || index < 0){
+            return str.substring(0,2);
+        }
+        return str.substring(index, index + 2);
+    }
 }
