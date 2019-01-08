@@ -113,4 +113,15 @@ public class Solution {
         }
         return str.substring(index, index + 2);
     }
+
+    public boolean hasBad(String str) {
+        if (str.equals("bad")) {
+            return true;
+        }
+        if (str.length() > 3 && (str.substring(0, 3).equals("bad") || str.substring(1, 4).equals("bad"))) {
+            return true;
+        } else {
+            return false;
+        }
+    }
 }
