@@ -128,4 +128,12 @@ public class Solution {
     public String atFirst(String str) {
         return (str + "@@").substring(0, 2);
     }
+
+    public String lastChars(String a, String b) {
+        a = a+"@";
+        if (b.equals("")){
+            b = "@";
+        }
+        return a.substring(0,1) + b.substring(b.length()-1);
+    }
 }
