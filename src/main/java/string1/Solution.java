@@ -130,23 +130,32 @@ public class Solution {
     }
 
     public String lastChars(String a, String b) {
-        a = a+"@";
-        if (b.equals("")){
+        a = a + "@";
+        if (b.equals("")) {
             b = "@";
         }
-        return a.substring(0,1) + b.substring(b.length()-1);
+        return a.substring(0, 1) + b.substring(b.length() - 1);
     }
 
     public String conCat(String a, String b) {
-        if (a.equals("")){
+        if (a.equals("")) {
             return b;
         }
-        if (b.equals("")){
+        if (b.equals("")) {
             return a;
         }
-        if (a.substring(a.length()-1).equals(b.substring(0,1))){
-            return a+b.substring(1);
+        if (a.substring(a.length() - 1).equals(b.substring(0, 1))) {
+            return a + b.substring(1);
         }
-        return a+b;
+        return a + b;
+    }
+
+    public String lastTwo(String str) {
+        if (str.length() < 2) {
+            return str;
+        }
+        char penultimate = str.charAt(str.length() - 2);
+        char last = str.charAt(str.length() - 1);
+        return str.substring(0, str.length() - 2) + last + penultimate;
     }
 }
