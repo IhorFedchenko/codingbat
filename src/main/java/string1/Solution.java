@@ -160,19 +160,29 @@ public class Solution {
     }
 
     public String seeColor(String str) {
-        if (str.length() > 2 && str.substring(0,3).equals("red")){
+        if (str.length() > 2 && str.substring(0, 3).equals("red")) {
             return "red";
         }
-        if (str.length() > 3 && str.substring(0,4).equals("blue")){
+        if (str.length() > 3 && str.substring(0, 4).equals("blue")) {
             return "blue";
         }
         return "";
     }
 
     public boolean frontAgain(String str) {
-        if (str.length() < 2){
+        if (str.length() < 2) {
             return false;
         }
-        return str.substring(0,2).equals(str.substring(str.length()-2));
+        return str.substring(0, 2).equals(str.substring(str.length() - 2));
+    }
+
+    public String minCat(String a, String b) {
+        if (a.length() == b.length()) {
+            return a + b;
+        }
+        if (a.length() > b.length()){
+            return a.substring(a.length()-b.length())+b;
+        }
+        return a+b.substring(b.length()-a.length());
     }
 }
