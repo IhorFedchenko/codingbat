@@ -78,7 +78,7 @@ public class Solution {
         return String.valueOf(str.charAt(str.length() - 1));
     }
 
-    public String withouEnd2(String str) {
+    public String withoutEnd2(String str) {
         if (str.length() <= 2) {
             return "";
         }
@@ -192,5 +192,15 @@ public class Solution {
         }
         String result = str.substring(0, 2);
         return result + result + result;
+    }
+
+    public String without2(String str) {
+        if (str.length() < 2){
+            return str;
+        }
+        if (str.substring(0,2).equals(str.substring(str.length()-2))){
+            return str.substring(2);
+        }
+        return str;
     }
 }
