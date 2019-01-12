@@ -180,9 +180,17 @@ public class Solution {
         if (a.length() == b.length()) {
             return a + b;
         }
-        if (a.length() > b.length()){
-            return a.substring(a.length()-b.length())+b;
+        if (a.length() > b.length()) {
+            return a.substring(a.length() - b.length()) + b;
         }
-        return a+b.substring(b.length()-a.length());
+        return a + b.substring(b.length() - a.length());
+    }
+
+    public String extraFront(String str) {
+        if (str.length() <= 2) {
+            return str + str + str;
+        }
+        String result = str.substring(0, 2);
+        return result + result + result;
     }
 }
