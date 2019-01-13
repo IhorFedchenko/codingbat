@@ -203,4 +203,24 @@ public class Solution {
         }
         return str;
     }
+
+    public String deFront(String str) {
+       String result = "";
+
+        for (int i = 0; i < str.length(); i++) {
+            if (i == 0 && str.charAt(i) == 'a'){
+                result+= "a";
+            }
+            if (i == 1 && str.charAt(i) == 'b'){
+                result += "b";
+
+            }
+            if (i == 2){
+                return result + str.substring(i);
+            }
+
+        }
+        return result;
+    }
+
 }
