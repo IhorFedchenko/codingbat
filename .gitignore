@@ -219,3 +219,9 @@ Temporary Items
 
 # End of https://www.gitignore.io/api/osx,java,eclipse,intellij,maven
 /codingBat.iml
+/.idea/dataSources.xml
+.idea/.name
+.idea/compiler.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml

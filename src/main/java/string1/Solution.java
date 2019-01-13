@@ -195,32 +195,40 @@ public class Solution {
     }
 
     public String without2(String str) {
-        if (str.length() < 2){
+        if (str.length() < 2) {
             return str;
         }
-        if (str.substring(0,2).equals(str.substring(str.length()-2))){
+        if (str.substring(0, 2).equals(str.substring(str.length() - 2))) {
             return str.substring(2);
         }
         return str;
     }
 
     public String deFront(String str) {
-       String result = "";
+        String result = "";
 
         for (int i = 0; i < str.length(); i++) {
-            if (i == 0 && str.charAt(i) == 'a'){
-                result+= "a";
+            if (i == 0 && str.charAt(i) == 'a') {
+                result += "a";
             }
-            if (i == 1 && str.charAt(i) == 'b'){
+            if (i == 1 && str.charAt(i) == 'b') {
                 result += "b";
 
             }
-            if (i == 2){
+            if (i == 2) {
                 return result + str.substring(i);
             }
 
         }
         return result;
+    }
+
+    public String startWord(String str, String word) {
+        if (str.length() >= word.length()
+                && str.substring(1, word.length()).equals(word.substring(1))) {
+            return str.substring(0, word.length());
+        }
+        return "";
     }
 
 }
