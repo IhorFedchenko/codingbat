@@ -244,4 +244,17 @@ public class Solution {
         return str;
     }
 
+    public String withoutX2(String str) {
+        String result = "";
+        if (str.equals("x") || str.equals("xx") || str.equals(result)) {
+            return result;
+        }
+        if (str.length() > 1) {
+            String tmp = str.substring(0, 2);
+            tmp = tmp.replaceAll("x", "");
+            result = tmp + str.substring(2);
+        }
+        return result;
+    }
+
 }
