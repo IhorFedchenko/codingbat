@@ -231,4 +231,17 @@ public class Solution {
         return "";
     }
 
+    public String withoutX(String str) {
+        if (str.length() < 1 || str.equals("x")) {
+            return "";
+        }
+        if (str.charAt(0) == 'x') {
+            str = str.substring(1);
+        }
+        if (str.charAt(str.length() - 1) == 'x') {
+            str = str.substring(0, str.length() - 1);
+        }
+        return str;
+    }
+
 }
