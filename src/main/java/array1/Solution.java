@@ -13,4 +13,8 @@ public class Solution {
         return nums[0] == nums[nums.length-1];
     }
 
+    public int[] makePi() {
+        return new int[]{3,1,4};
+    }
+
 }
