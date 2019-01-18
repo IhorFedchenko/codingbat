@@ -26,4 +26,11 @@ public class Solution {
         return nums[0] + nums[1] + nums[2];
     }
 
+    public int[] rotateLeft3(int[] nums) {
+        int[] result = new int[3];
+        result[2] = nums[0];
+        result[0] = nums[1];
+        result[1] = nums[2];
+        return result;
+    }
 }
