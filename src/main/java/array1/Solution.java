@@ -63,4 +63,7 @@ public class Solution {
         return nums[0] + nums[1];
     }
 
+    public int[] middleWay(int[] a, int[] b) {
+        return new int[]{a[1], b[1]};
+    }
 }
