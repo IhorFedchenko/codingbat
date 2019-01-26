@@ -93,12 +93,12 @@ public class Solution {
     }
 
     public int[] fix23(int[] nums) {
-        if (nums[0] == 2 && nums[1] == 3){
+        if (nums[0] == 2 && nums[1] == 3) {
             nums[1] = 0;
             return nums;
         }
 
-        if (nums[1] == 2 && nums[2] == 3){
+        if (nums[1] == 2 && nums[2] == 3) {
             nums[2] = 0;
             return nums;
         }
@@ -107,19 +107,23 @@ public class Solution {
 
     public int start1(int[] a, int[] b) {
         int result = 0;
-        if (a.length > 0 && a[0] == 1){
+        if (a.length > 0 && a[0] == 1) {
             result++;
         }
-        if (b.length > 0 && b[0] == 1){
+        if (b.length > 0 && b[0] == 1) {
             result++;
         }
         return result;
     }
 
     public int[] biggerTwo(int[] a, int[] b) {
-        if (a[0] + a[1] < b[0] + b[1]){
+        if (a[0] + a[1] < b[0] + b[1]) {
             return b;
         }
         return a;
+    }
+
+    public int[] makeMiddle(int[] nums) {
+        return new int[]{nums[(nums.length / 2) - 1], nums[(nums.length / 2)]};
     }
 }
