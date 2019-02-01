@@ -175,4 +175,14 @@ public class Solution {
                 nums.length > 2 && nums[1] == 1 && nums[2] == 3 ||
                 nums.length > 2 && nums[nums.length - 2] == 1 && nums[nums.length - 1] == 3;
     }
+
+    public int[] make2(int[] a, int[] b) {
+    if (a.length > 1){
+        return new int[]{a[0], a[1]};
+    }
+    if (a.length == 1){
+        return new int[]{a[0], b[0]};
+    }
+    return new int[]{b[0], b[1]};
+    }
 }
