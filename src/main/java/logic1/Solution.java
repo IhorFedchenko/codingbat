@@ -28,4 +28,17 @@ public class Solution {
         }
         return  temp >= 60 && temp <=90;
     }
+
+    public int caughtSpeeding(int speed, boolean isBirthday) {
+        if (isBirthday){
+            speed -= 5;
+        }
+        if (speed < 61){
+            return 0;
+        }
+        if (speed > 80){
+            return 2;
+        }
+        return 1;
+    }
 }
