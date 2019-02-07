@@ -48,4 +48,22 @@ public class Solution {
         }
         return a + b;
     }
+
+    public String alarmClock(int day, boolean vacation) {
+       boolean workday = false;
+       if (day > 0 && day < 6){
+           workday = true;
+       }
+       if (workday && vacation){
+           return "10:00";
+       }
+       if (workday && !vacation){
+           return "7:00";
+       }
+       if (!workday && vacation){
+           return "off";
+       }
+       return "10:00";
+    }
+
 }
