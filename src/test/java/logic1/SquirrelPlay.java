@@ -84,5 +84,4 @@ public class SquirrelPlay {
         Solution solution = new Solution();
         assertTrue(solution.squirrelPlay(60, false));
     }
-
 }
