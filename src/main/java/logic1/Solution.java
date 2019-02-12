@@ -82,4 +82,8 @@ public class Solution {
         }
         return !(n > 1 && n < 10);
     }
+
+    public boolean more20(int n) {
+        return n > 20 && (n % 20 == 1 || n % 20 == 2);
+    }
 }
