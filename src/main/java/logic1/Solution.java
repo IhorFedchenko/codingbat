@@ -50,20 +50,20 @@ public class Solution {
     }
 
     public String alarmClock(int day, boolean vacation) {
-       boolean workday = false;
-       if (day > 0 && day < 6){
-           workday = true;
-       }
-       if (workday && vacation){
-           return "10:00";
-       }
-       if (workday && !vacation){
-           return "7:00";
-       }
-       if (!workday && vacation){
-           return "off";
-       }
-       return "10:00";
+        boolean workday = false;
+        if (day > 0 && day < 6) {
+            workday = true;
+        }
+        if (workday && vacation) {
+            return "10:00";
+        }
+        if (workday && !vacation) {
+            return "7:00";
+        }
+        if (!workday && vacation) {
+            return "off";
+        }
+        return "10:00";
     }
 
     public boolean love6(int a, int b) {
@@ -76,6 +76,7 @@ public class Solution {
     public boolean specialEleven(int n) {
         return n % 11 == 0 || n % 11 == 1;
     }
+
     public boolean in1To10(int n, boolean outsideMode) {
         if (!outsideMode) {
             return n > 0 && n < 11;
@@ -85,5 +86,9 @@ public class Solution {
 
     public boolean more20(int n) {
         return n > 20 && (n % 20 == 1 || n % 20 == 2);
+    }
+
+    public boolean old35(int n) {
+        return n % 3 == 0 ^ n % 5 == 0;
     }
 }
