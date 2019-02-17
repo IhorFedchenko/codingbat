@@ -95,4 +95,8 @@ public class Solution {
     public boolean less20(int n) {
         return (n + 1) % 20 == 0 || (n + 2) % 20 == 0;
     }
+
+    public boolean nearTen(int num) {
+        return num % 10 < 3 || num % 10 > 7;
+    }
 }
