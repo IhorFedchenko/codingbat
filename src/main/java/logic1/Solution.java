@@ -124,4 +124,18 @@ public class Solution {
         }
         return 1;
     }
+
+    public String fizzString(String str) {
+        String result = "";
+        if (str.charAt(0) == 'f'){
+            result += "Fizz";
+        }
+        if (str.charAt(str.length()-1) == 'b'){
+            result += "Buzz";
+        }
+        if (result.equals("")){
+            result = str;
+        }
+        return result;
+    }
 }
