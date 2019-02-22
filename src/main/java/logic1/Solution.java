@@ -138,4 +138,18 @@ public class Solution {
         }
         return result;
     }
+
+    public String fizzString2(int n) {
+       if (n % 3 !=0 && n % 5 != 0){
+           return n +"!";
+       }
+       String result = "";
+       if (n % 3 == 0){
+           result += "Fizz";
+       }
+       if (n % 5  == 0){
+           result += "Buzz";
+       }
+       return result + "!";
+    }
 }
