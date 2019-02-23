@@ -116,12 +116,16 @@ public class Solution {
     }
 
     public int teaParty(int tea, int candy) {
-        if (tea < 5 || candy < 5){
+        if (tea < 5 || candy < 5) {
             return 0;
         }
         if (tea + tea <= candy || candy + candy <= tea) {
             return 2;
         }
         return 1;
+    }
+
+    public boolean twoAsOne(int a, int b, int c) {
+        return a == b + c || b == a + c || c == a + b;
     }
 }
