@@ -116,7 +116,7 @@ public class Solution {
     }
 
     public int teaParty(int tea, int candy) {
-        if (tea < 5 || candy < 5){
+        if (tea < 5 || candy < 5) {
             return 0;
         }
         if (tea + tea <= candy || candy + candy <= tea) {
@@ -127,33 +127,40 @@ public class Solution {
 
     public String fizzString(String str) {
         String result = "";
-        if (str.charAt(0) == 'f'){
+        if (str.charAt(0) == 'f') {
             result += "Fizz";
         }
-        if (str.charAt(str.length()-1) == 'b'){
+        if (str.charAt(str.length() - 1) == 'b') {
             result += "Buzz";
         }
-        if (result.equals("")){
+        if (result.equals("")) {
             result = str;
         }
         return result;
     }
 
     public String fizzString2(int n) {
-       if (n % 3 !=0 && n % 5 != 0){
-           return n +"!";
-       }
-       String result = "";
-       if (n % 3 == 0){
-           result += "Fizz";
-       }
-       if (n % 5  == 0){
-           result += "Buzz";
-       }
-       return result + "!";
+        if (n % 3 != 0 && n % 5 != 0) {
+            return n + "!";
+        }
+        String result = "";
+        if (n % 3 == 0) {
+            result += "Fizz";
+        }
+        if (n % 5 == 0) {
+            result += "Buzz";
+        }
+        return result + "!";
     }
 
     public boolean twoAsOne(int a, int b, int c) {
         return a == b + c || b == a + c || c == a + b;
+    }
+
+    public boolean inOrder(int a, int b, int c, boolean bOk) {
+        if (bOk) {
+            return c > b;
+        }
+        return a < b && b < c;
     }
 }
