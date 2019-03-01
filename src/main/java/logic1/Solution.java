@@ -172,9 +172,15 @@ public class Solution {
     }
 
     public boolean lastDigit(int a, int b, int c) {
-            if (a % 10 == b % 10 || a % 10 == c % 10 || b % 10 == c % 10){
-                return true;
-            }
+        if (a % 10 == b % 10 || a % 10 == c % 10 || b % 10 == c % 10) {
+            return true;
+        }
         return false;
+    }
+
+    public boolean lessBy10(int a, int b, int c) {
+        return (Math.abs(a - b) >= 10 ||
+                Math.abs(b - c) >= 10 ||
+                Math.abs(a - c) >= 10);
     }
 }
