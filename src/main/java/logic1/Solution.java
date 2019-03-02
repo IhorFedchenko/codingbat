@@ -183,4 +183,15 @@ public class Solution {
                 Math.abs(b - c) >= 10 ||
                 Math.abs(a - c) >= 10);
     }
+
+    public int withoutDoubles(int die1, int die2, boolean noDoubles) {
+        boolean dieDouble = die1 == die2;
+        if (dieDouble && noDoubles && die1 == 6){
+            return die1 + 1;
+        }
+        if (dieDouble && noDoubles){
+            return die1 + die2 + 1;
+        }
+        return die1 + die2;
+    }
 }

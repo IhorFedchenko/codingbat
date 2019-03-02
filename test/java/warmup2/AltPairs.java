@@ -27,7 +27,7 @@ public class AltPairs {
     @Test
     public void alt_pairs_v04(){
         Solution solution = new Solution();
-        assertEquals("yak", solution.altPairs("ya"));
+        assertEquals("ya", solution.altPairs("yak"));
     }
 
     @Test
