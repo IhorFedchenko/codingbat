@@ -186,28 +186,41 @@ public class Solution {
 
     public int withoutDoubles(int die1, int die2, boolean noDoubles) {
         boolean dieDouble = die1 == die2;
-        if (dieDouble && noDoubles && die1 == 6){
+        if (dieDouble && noDoubles && die1 == 6) {
             return die1 + 1;
         }
-        if (dieDouble && noDoubles){
+        if (dieDouble && noDoubles) {
             return die1 + die2 + 1;
         }
         return die1 + die2;
     }
 
     public int maxMod5(int a, int b) {
-        if (a == b){
+        if (a == b) {
             return 0;
         }
-        if (a < b && a % 5 == b % 5){
-            return  a;
+        if (a < b && a % 5 == b % 5) {
+            return a;
         }
-        if (b < a && a % 5 == b % 5){
+        if (b < a && a % 5 == b % 5) {
             return b;
         }
-        if (a < b){
+        if (a < b) {
             return b;
         }
         return a;
+    }
+
+    public int redTicket(int a, int b, int c) {
+        if (a + b + c == 6) {
+            return 10;
+        }
+        if (a  == b && b == c){
+            return 5;
+        }
+        if (a != b && a != c){
+            return 1;
+        }
+        return 0;
     }
 }
