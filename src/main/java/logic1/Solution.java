@@ -215,12 +215,22 @@ public class Solution {
         if (a + b + c == 6) {
             return 10;
         }
-        if (a  == b && b == c){
+        if (a == b && b == c) {
             return 5;
         }
-        if (a != b && a != c){
+        if (a != b && a != c) {
             return 1;
         }
         return 0;
     }
+
+    public int greenTicket(int a, int b, int c) {
+        if (a != b && a != c && b != c)
+            return 0;
+        if (a == b && b == c){
+            return 20;
+        }
+        return 10;
+    }
+
 }
