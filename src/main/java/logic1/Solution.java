@@ -253,4 +253,13 @@ public class Solution {
                 a % 10 == b / 10 ||
                 a % 10 == b % 10;
     }
+
+    public int sumLimit(int a, int b) {
+        int lengthA = String.valueOf(a).length();
+        int sumLength = String.valueOf(a + b).length();
+        if (sumLength > lengthA){
+            return a;
+        }
+        return a + b;
+    }
 }
