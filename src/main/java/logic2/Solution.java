@@ -23,15 +23,26 @@ public class Solution {
     }
 
     public int luckySum(int a, int b, int c) {
-        if (a == 13){
+        if (a == 13) {
             return 0;
         }
-        if (b == 13){
+        if (b == 13) {
             return a;
         }
-        if (c == 13){
+        if (c == 13) {
             return a + b;
         }
         return a + b + c;
+    }
+
+    public int noTeenSum(int a, int b, int c) {
+        return fixTeen(a) + fixTeen(b) + fixTeen(c);
+    }
+
+    private int fixTeen(int n) {
+        if (n > 12 && n < 15 || n > 16 && n < 20) {
+            return 0;
+        }
+        return n;
     }
 }
