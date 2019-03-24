@@ -248,7 +248,7 @@ public class Solution {
     }
 
     public boolean shareDigit(int a, int b) {
-        return  a / 10 == b / 10 ||
+        return a / 10 == b / 10 ||
                 a / 10 == b % 10 ||
                 a % 10 == b / 10 ||
                 a % 10 == b % 10;
@@ -257,7 +257,7 @@ public class Solution {
     public int sumLimit(int a, int b) {
         int lengthA = String.valueOf(a).length();
         int sumLength = String.valueOf(a + b).length();
-        if (sumLength > lengthA){
+        if (sumLength > lengthA) {
             return a;
         }
         return a + b;
