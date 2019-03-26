@@ -87,4 +87,10 @@ public class Solution {
         Arrays.sort(evenlyarray);
         return evenlyarray[1] - evenlyarray[0] == evenlyarray[2] - evenlyarray[1];
     }
+
+    public int makeChocolate(int small, int big, int goal) {
+        if (big * 5 + small < goal || small < goal % 5) return -1;
+        if (big * 5 <= goal) return goal - big * 5;
+        return goal % 5;
+    }
 }
