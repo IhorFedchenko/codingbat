@@ -18,4 +18,9 @@ public class Solution {
         int cut = str.length();
         return (full - cut) / found.length();
     }
+
+    public boolean catDog(String str) {
+        return str.replace("dog", "").length() ==
+                str.replace("cat", "").length();
+    }
 }
