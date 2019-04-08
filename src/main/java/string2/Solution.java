@@ -27,7 +27,7 @@ public class Solution {
     public int countCode(String str) {
         int result = 0;
         for (int i = 0; i < str.length() - 3; i++) {
-            if (str.charAt(i) == 'c' && str.charAt(i+1) == 'o' && str.charAt(i + 3) == 'e'){
+            if (str.charAt(i) == 'c' && str.charAt(i + 1) == 'o' && str.charAt(i + 3) == 'e') {
                 result++;
                 i += 3;
             }
@@ -38,9 +38,14 @@ public class Solution {
     public boolean endOther(String a, String b) {
         a = a.toLowerCase();
         b = b.toLowerCase();
-        if (a.length() < b.length()){
+        if (a.length() < b.length()) {
             return b.endsWith(a);
         }
         return a.endsWith(b);
+    }
+
+    public boolean xyzThere(String str) {
+        str = str.replace(".xyz", " ");
+        return str.contains("xyz");
     }
 }
