@@ -61,4 +61,38 @@ public class Solution {
     public boolean xyBalance(String str) {
         return (str.indexOf('x') == -1) || str.lastIndexOf('x') < str.lastIndexOf('y');
     }
+
+    public String mixString(String a, String b) {
+        int aLength = a.length();
+        int bLength = b.length();
+        String result = "";
+
+
+        if (aLength == bLength){
+            for (int i = 0; i < a.length() ; i++) {
+                result += a.charAt(i);
+                result += b.charAt(i);
+            }
+        }
+        if (aLength < bLength){
+            String bMix = b.substring(0, aLength);
+            String bSufix = b.substring(aLength);
+            for (int i = 0; i < a.length() ; i++) {
+                result += a.charAt(i);
+                result += b.charAt(i);
+            }
+            result += bSufix;
+        }
+
+        if (aLength > bLength) {
+            String aMix = a.substring(0, bLength);
+            String aSufix = a.substring(bLength);
+            for (int i = 0; i < b.length() ; i++) {
+                result += a.charAt(i);
+                result += b.charAt(i);
+            }
+            result += aSufix;
+        }
+      return result;
+    }
 }
