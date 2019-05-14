@@ -68,16 +68,16 @@ public class Solution {
         String result = "";
 
 
-        if (aLength == bLength) {
-            for (int i = 0; i < a.length(); i++) {
+        if (aLength == bLength){
+            for (int i = 0; i < a.length() ; i++) {
                 result += a.charAt(i);
                 result += b.charAt(i);
             }
         }
-        if (aLength < bLength) {
+        if (aLength < bLength){
             String bMix = b.substring(0, aLength);
             String bSufix = b.substring(aLength);
-            for (int i = 0; i < a.length(); i++) {
+            for (int i = 0; i < a.length() ; i++) {
                 result += a.charAt(i);
                 result += b.charAt(i);
             }
@@ -87,11 +87,27 @@ public class Solution {
         if (aLength > bLength) {
             String aMix = a.substring(0, bLength);
             String aSufix = a.substring(bLength);
-            for (int i = 0; i < b.length(); i++) {
+            for (int i = 0; i < b.length() ; i++) {
                 result += a.charAt(i);
                 result += b.charAt(i);
             }
             result += aSufix;
+        }
+      return result;
+    }
+
+    public String repeatEnd(String str, int n) {
+        String result = "";
+        for (int i = 0; i < n; i++) {
+            result += str.substring(str.length() - n);
+        }
+        return result;
+    }
+
+    public String repeatFront(String str, int n) {
+        String result = "";
+        for (int i = 0; i < n; i++) {
+            result += str.substring(0, n - i);
         }
         return result;
     }
