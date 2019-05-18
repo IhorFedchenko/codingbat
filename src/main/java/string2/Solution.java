@@ -68,16 +68,16 @@ public class Solution {
         String result = "";
 
 
-        if (aLength == bLength){
-            for (int i = 0; i < a.length() ; i++) {
+        if (aLength == bLength) {
+            for (int i = 0; i < a.length(); i++) {
                 result += a.charAt(i);
                 result += b.charAt(i);
             }
         }
-        if (aLength < bLength){
+        if (aLength < bLength) {
             String bMix = b.substring(0, aLength);
             String bSufix = b.substring(aLength);
-            for (int i = 0; i < a.length() ; i++) {
+            for (int i = 0; i < a.length(); i++) {
                 result += a.charAt(i);
                 result += b.charAt(i);
             }
@@ -87,13 +87,13 @@ public class Solution {
         if (aLength > bLength) {
             String aMix = a.substring(0, bLength);
             String aSufix = a.substring(bLength);
-            for (int i = 0; i < b.length() ; i++) {
+            for (int i = 0; i < b.length(); i++) {
                 result += a.charAt(i);
                 result += b.charAt(i);
             }
             result += aSufix;
         }
-      return result;
+        return result;
     }
 
     public String repeatEnd(String str, int n) {
@@ -118,10 +118,16 @@ public class Solution {
             if (i % 2 == 0) {
                 result += word;
             } else {
-                result+= sep;
+                result += sep;
             }
-
         }
         return result;
     }
+
+    public boolean prefixAgain(String str, int n) {
+        String prefix = str.substring(0, n);
+        String found = str.substring(n);
+        return found.contains(prefix);
+    }
 }
+
