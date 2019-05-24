@@ -129,5 +129,18 @@ public class Solution {
         String found = str.substring(n);
         return found.contains(prefix);
     }
+
+    public boolean xyzMiddle(String str) {
+        String content = "xyz";
+        int notTarget = str.length() - content.length();
+        if (str.length() < content.length()){
+            return false;
+        }
+        if (notTarget % 2 == 0){
+            return str.substring(notTarget/2).startsWith(content);
+        }
+        return  str.substring(notTarget/2).startsWith(content) ||
+                str.substring((notTarget/2)+1).startsWith(content);
+    }
 }
 
