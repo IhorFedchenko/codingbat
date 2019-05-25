@@ -133,14 +133,23 @@ public class Solution {
     public boolean xyzMiddle(String str) {
         String content = "xyz";
         int notTarget = str.length() - content.length();
-        if (str.length() < content.length()){
+        if (str.length() < content.length()) {
             return false;
         }
-        if (notTarget % 2 == 0){
-            return str.substring(notTarget/2).startsWith(content);
+        if (notTarget % 2 == 0) {
+            return str.substring(notTarget / 2).startsWith(content);
         }
-        return  str.substring(notTarget/2).startsWith(content) ||
-                str.substring((notTarget/2)+1).startsWith(content);
+        return str.substring(notTarget / 2).startsWith(content) ||
+                str.substring((notTarget / 2) + 1).startsWith(content);
+    }
+
+    public String getSandwich(String str) {
+        int first = str.indexOf("bread");
+        int last = str.lastIndexOf("bread");
+        if (first == last) {
+            return "";
+        }
+        return str.substring(first + 5, last);
     }
 }
 
