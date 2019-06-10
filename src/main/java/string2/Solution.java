@@ -188,17 +188,29 @@ public class Solution {
 
     public String starOut(String str) {
         String result = "";
-        for (int i = 0; i < str.length() ; i++) {
-            if (i == 0 && str.charAt(i) != '*'){
+        for (int i = 0; i < str.length(); i++) {
+            if (i == 0 && str.charAt(i) != '*') {
                 result += str.charAt(i);
             }
-            if (i > 0 && str.charAt(i) != '*' && str.charAt(i-1) != '*'){
+            if (i > 0 && str.charAt(i) != '*' && str.charAt(i - 1) != '*') {
                 result += str.charAt(i);
             }
-            if (i > 0 && str.charAt(i) == '*' && str.charAt(i-1) != '*'){
-                result = result.substring(0, result.length()-1);
+            if (i > 0 && str.charAt(i) == '*' && str.charAt(i - 1) != '*') {
+                result = result.substring(0, result.length() - 1);
             }
         }
         return result;
+    }
+
+    public String plusOut(String str, String word) {
+        StringBuilder out = new StringBuilder(str);
+        for (int i = 0; i < out.length(); ) {
+            if (!str.startsWith(word, i)) {
+                out.setCharAt(i++, '+');
+            } else {
+                i += word.length();
+            }
+        }
+        return out.toString();
     }
 }
