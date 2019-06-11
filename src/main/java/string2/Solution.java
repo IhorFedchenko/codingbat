@@ -213,4 +213,25 @@ public class Solution {
         }
         return out.toString();
     }
+
+    public String wordEnds(String str, String word) {
+        String result = "";
+        if (str.equals(word)){
+            return result;
+        }
+        if (str.startsWith(word)) {
+            result += str.charAt(word.length());
+        }
+        for (int i = 1; i < str.length() - word.length(); i++) {
+            if (str.startsWith(word, i)) {
+                result += str.charAt(i - 1);
+                result += str.charAt(i + word.length());
+            }
+
+        }
+        if (str.endsWith(word)){
+            result+= str.charAt(str.length()- word.length()-1);
+        }
+        return result;
+    }
 }
