@@ -15,6 +15,14 @@ public class Solution {
     }
 
     public String withoutString(String base, String remove) {
-        return base.replaceAll("(?i)"+remove, "");
+        return base.replaceAll("(?i)" + remove, "");
+    }
+
+    public boolean equalIsNot(String str) {
+        int diffLengthIs = str.length() - str.replaceAll("is", "").length();
+        int diffLengthNot = str.length() - str.replaceAll("not", "").length();
+        int countIs = diffLengthIs / 2;
+        int countNot = diffLengthNot / 3;
+        return countIs == countNot;
     }
 }
