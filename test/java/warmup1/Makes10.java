@@ -1,12 +1,19 @@
 package warmup1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 public class Makes10 {
-    Solution solution = new Solution();
+
+    private Solution solution;
+
+    @Before
+    public void setup() {
+        solution = new Solution();
+    }
 
     @Test
     public void Makes10_9_10() {

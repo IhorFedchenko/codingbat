@@ -1,13 +1,19 @@
 package string2;
 
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
 public class RepeatSeparator {
 
-    Solution solution = new Solution();
+    private Solution solution;
+
+    @Before
+    public void setup() {
+        solution = new Solution();
+    }
 
     @Test
     public void repeat_separator_v01() {

@@ -1,5 +1,6 @@
 package string2;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;
@@ -7,7 +8,12 @@ import static org.junit.Assert.assertTrue;
 
 public class PrefixAgain {
 
-    Solution solution = new Solution();
+    private Solution solution;
+
+    @Before
+    public void setup() {
+        solution = new Solution();
+    }
 
     @Test
     public void prefix_again_v01() {
@@ -48,6 +54,7 @@ public class PrefixAgain {
     public void prefix_again_v08() {
         assertTrue(solution.prefixAgain("Hi12345Hi6789Hi10", 3));
     }
+
     @Test
     public void prefix_again_v09() {
         assertFalse(solution.prefixAgain("Hi12345Hi6789Hi10", 4));

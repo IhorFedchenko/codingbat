@@ -1,13 +1,18 @@
 package warmup1;
 
+import org.junit.Before;
 import org.junit.Test;
-
 
 import static org.junit.Assert.assertEquals;
 
 public class SumDoubleSolutionTest {
 
-    Solution solution = new Solution();
+    private Solution solution;
+
+    @Before
+    public void setup() {
+        solution = new Solution();
+    }
 
     @Test
     public void sumDouble_1_2() {

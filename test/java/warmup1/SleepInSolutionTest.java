@@ -1,16 +1,20 @@
 package warmup1;
 
+import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 public class SleepInSolutionTest {
 
-    Solution solution = new Solution();
+    private Solution solution;
 
-    //SLEEP IN
+    @Before
+    public void setup() {
+        solution = new Solution();
+    }
+
     @Test
     public void sleepInFalseFalse() {
         assertTrue(solution.sleepIn(false, false));
@@ -30,10 +34,5 @@ public class SleepInSolutionTest {
     public void sleepInTrueTrue() {
         assertTrue(solution.sleepIn(true, true));
     }
-
-    //MONKEY TROUBLE
-
-    //SUM DOUBLE
-
 
 }

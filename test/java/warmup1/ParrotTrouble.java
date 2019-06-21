@@ -1,12 +1,19 @@
 package warmup1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static junit.framework.TestCase.assertFalse;
 import static junit.framework.TestCase.assertTrue;
 
 public class ParrotTrouble {
-    Solution solution = new Solution();
+
+    private Solution solution;
+
+    @Before
+    public void setup() {
+        solution = new Solution();
+    }
 
     @Test
     public void parrotTroubleTrue6() {

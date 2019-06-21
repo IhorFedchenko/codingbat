@@ -1,5 +1,6 @@
 package warmup1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;
@@ -7,7 +8,12 @@ import static org.junit.Assert.assertTrue;
 
 public class PosNeg {
 
-    Solution solution = new Solution();
+    private Solution solution;
+
+    @Before
+    public void setup() {
+        solution = new Solution();
+    }
 
     @Test
     public void posNeg_1_1n_false() {

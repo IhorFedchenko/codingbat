@@ -7,7 +7,12 @@ import static org.junit.Assert.assertEquals;
 
 public class WithoutString {
 
-    Solution solution = new Solution();
+    private Solution solution;
+
+    @Before
+    public void setup() {
+        solution = new Solution();
+    }
 
     @Test
     public void without_string_v01() {

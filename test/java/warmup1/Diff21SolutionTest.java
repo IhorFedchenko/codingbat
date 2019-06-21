@@ -1,11 +1,18 @@
 package warmup1;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 
 public class Diff21SolutionTest {
-    Solution solution = new Solution();
+
+    private Solution solution;
+
+    @Before
+    public void setup() {
+        solution = new Solution();
+    }
 
     @Test
     public void diff21_19() {
