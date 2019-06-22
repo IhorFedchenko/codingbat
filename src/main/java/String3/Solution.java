@@ -25,4 +25,19 @@ public class Solution {
         int countNot = diffLengthNot / 3;
         return countIs == countNot;
     }
+
+    public boolean gHappy(String str) {
+
+        if (str.length() == 0) {
+            return true;
+        }
+        if (str.length() == 1) {
+            return false;
+        }
+
+        String input = str.replaceAll("ggg", "");
+        input = input.replaceAll("gg", "");
+
+        return input.length() < str.length() && ! input.contains("g");
+    }
 }
