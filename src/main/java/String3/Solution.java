@@ -60,4 +60,18 @@ public class Solution {
         }
         return result;
     }
+
+    public String sameEnds(String string) {
+    String result = "";
+    int middle = string.length() / 2;
+        for (int i = 0; i < middle ; i++) {
+            String start = string.substring(0, middle - i);
+            String end = string.substring(middle + i + string.length() % 2);
+            if (start.equals(end)){
+                result = start;
+                break;
+            }
+        }
+    return result;
+    }
 }
