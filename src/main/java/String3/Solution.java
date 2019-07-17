@@ -55,23 +55,46 @@ public class Solution {
         int result = 0;
         for (int i = 0; i < str.length(); i++) {
             if (Character.isDigit(str.charAt(i))) {
-               result += Integer.parseInt(String.valueOf(str.charAt(i)));
+                result += Integer.parseInt(String.valueOf(str.charAt(i)));
             }
         }
         return result;
     }
 
     public String sameEnds(String string) {
-    String result = "";
-    int middle = string.length() / 2;
-        for (int i = 0; i < middle ; i++) {
+        String result = "";
+        int middle = string.length() / 2;
+        for (int i = 0; i < middle; i++) {
             String start = string.substring(0, middle - i);
             String end = string.substring(middle + i + string.length() % 2);
-            if (start.equals(end)){
+            if (start.equals(end)) {
                 result = start;
                 break;
             }
         }
-    return result;
+        return result;
+    }
+
+    public String mirrorEnds(String string) {
+        if (string.length() == 1){
+            return string;
+        }
+        String result = "";
+        int middle = string.length() / 2;
+        for (int i = 0; i < middle; i++) {
+            String start = string.substring(0, middle - i);
+            String end = string.substring(middle + i + string.length() % 2);
+            String mirror = "";
+            for (int j = end.length() - 1; j >= 0; j--) {
+                mirror += end.charAt(j);
+            }
+            if (start.equals(mirror) && i == 0 ) {
+                return string;
+            }
+            if (start.equals(mirror)) {
+                return start;
+            }
+        }
+        return result;
     }
 }
