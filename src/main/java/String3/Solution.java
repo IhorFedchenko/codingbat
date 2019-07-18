@@ -97,4 +97,23 @@ public class Solution {
         }
         return result;
     }
+
+    public int maxBlock(String str) {
+        int result = 0;
+        int tmpResult = 1;
+        if (str.length() == 0){
+            return 0;
+        }
+        for (int i = 0; i < str.length() ; i++) {
+            if (i < str.length() - 1 && str.charAt(i) == str.charAt(i+1)){
+                tmpResult++;
+            } else {
+                tmpResult = 1;
+            }
+            if (tmpResult > result){
+                result = tmpResult;
+            }
+        }
+        return result;
+    }
 }
