@@ -116,4 +116,21 @@ public class Solution {
         }
         return result;
     }
+
+    public int sumNumbers(String str) {
+        int result = 0;
+        String tmp = "";
+        for (int i = 0; i < str.length() ; i++) {
+            if (Character.isDigit(str.charAt(i))){
+                if (i < str.length() -1 && Character.isDigit(str.charAt(i +1))){
+                    tmp += str.charAt(i);
+                }else {
+                    tmp += str.charAt(i);
+                    result += Integer.parseInt(tmp);
+                    tmp = "";
+                }
+            }
+        }
+        return result;
+    }
 }
